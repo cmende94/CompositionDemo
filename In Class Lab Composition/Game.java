@@ -5,5 +5,13 @@ public class Game {
  
         System.out.println(sword);
         System.out.println(bow);
+
+        Inventory bag = new Inventory(3);
+        bag.addWeapon(sword);
+        bag.addWeapon(bow);
+        
+        System.out.println("Items in bag: " + bag.getCount());
+        System.out.println("Total weight: " + bag.totalWeight() + " lbs");
+        System.out.println(bag);
     }
 }
