@@ -16,5 +16,17 @@ public class Game {
         System.out.println();
         System.out.println("--- Loadout ---");
         System.out.println(hero.getBag());
+
+    Weapon shield = new Weapon("Shield", 0, 8.0);
+    Weapon staff = new Weapon("Staff", 12, 2.0);
+    Weapon hammer = new Weapon("Hammer", 20, 6.0);
+ 
+    hero.pickUp(shield);
+    hero.pickUp(staff);
+    hero.pickUp(hammer);   // Should be rejected — bag is full
+    
+    System.out.println();
+    System.out.println(hero);
+
     }
 }
