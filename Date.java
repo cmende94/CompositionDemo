@@ -14,6 +14,23 @@ public class Date{
     public int getMonth() {return month;}
     public int getYear() {return year;}
 
+    public String toISOString(){
+        if(month < 10 && day > 10){
+            return year + "-0" + month + "-0" + day;
+        }
+        else if(month < 10){
+            return year + "-0" + month + "-" + day;
+        }
+        else if(day < 10){
+            return year + "-" + month +"-0" + day;
+        }
+        else{
+            return year + "-" + month + "-" + day;
+        }
+    }
+
+    
+
     public String toString(){
         return month + "/" + day + "/"+ year;
     }
