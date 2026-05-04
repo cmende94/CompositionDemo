@@ -10,8 +10,13 @@ public class Player {
     }
 
     public void pickUp(Weapon w){
-        bag.addWeapon(w);
-        System.out.println(name + " picked up " + w.getName());
+        String result = bag.addWeapon(w);
+        if(result.equals("y")){
+            System.out.println(name + " picked up " + w.getName());
+        }
+        else if(result.equals("full")){
+            System.out.println("Inventory full");
+        }
     }
 
     public Inventory getBag(){return bag;}

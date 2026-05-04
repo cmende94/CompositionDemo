@@ -6,13 +6,16 @@ public class Inventory {
         weapons = new Weapon[size];
     }
 
-    public void addWeapon(Weapon w){
+    public String addWeapon(Weapon w){
         if(count < weapons.length){
             weapons[count] = w;
             count++;
+
+            return "y";
+
         }
         else{
-            System.out.println("Inventory full");
+            return "full";
         }
     }
 
