@@ -29,7 +29,9 @@ public class Date{
         }
     }
 
-    
+    public String toMXString(){
+        return day + "/" + month + "/" + year;
+    }
 
     public String toString(){
         return month + "/" + day + "/"+ year;
