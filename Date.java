@@ -10,6 +10,10 @@ public class Date{
         this.day = day;
     }
 
+    public int getDay() {return day;}
+    public int getMonth() {return month;}
+    public int getYear() {return year;}
+
     public String toString(){
         return month + "/" + day + "/"+ year;
     }
